@@ -307,7 +307,9 @@ class core_admin_renderer extends plugin_renderer_base {
         $output .= $this->overridetossl_warning($overridetossl);
         $output .= $this->cache_warnings($cachewarnings);
         $output .= $this->events_handlers($eventshandlers);
-        $output .= $this->registration_warning($registered);
+
+        // BEEKEE : hide site not registred notification
+        // $output .= $this->registration_warning($registered);
         $output .= $this->mobile_configuration_warning($mobileconfigured);
         $output .= $this->forgotten_password_url_warning($invalidforgottenpasswordurl);
 
@@ -823,7 +825,8 @@ class core_admin_renderer extends plugin_renderer_base {
      */
     protected function registration_warning($registered) {
 
-        if (!$registered && site_is_public()) {
+        if (!$registered) {
+
             if (has_capability('moodle/site:config', context_system::instance())) {
                 $registerbutton = $this->single_button(new moodle_url('/admin/registration/index.php'),
                     get_string('register', 'admin'));
@@ -847,7 +850,8 @@ class core_admin_renderer extends plugin_renderer_base {
      * @return string
      */
     public function warn_if_not_registered() {
-        return $this->registration_warning(\core\hub\registration::is_registered());
+        // BEEKEE : hide site not registred notification
+        //return $this->registration_warning(\core\hub\registration::is_registered());
     }
 
     /**

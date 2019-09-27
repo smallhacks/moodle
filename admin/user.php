@@ -417,9 +417,10 @@
         }
     }
 
+    // BEEKEE : hide filters
     // add filters
-    $ufiltering->display_add();
-    $ufiltering->display_active();
+    //$ufiltering->display_add();
+    //$ufiltering->display_active();
 
     if (!empty($table)) {
         echo html_writer::start_tag('div', array('class'=>'no-overflow'));
@@ -428,8 +429,13 @@
         echo $OUTPUT->paging_bar($usercount, $page, $perpage, $baseurl);
     }
     if (has_capability('moodle/user:create', $sitecontext)) {
-        $url = new moodle_url('/user/editadvanced.php', array('id' => -1));
-        echo $OUTPUT->single_button($url, get_string('addnewuser'), 'get');
+
+        // BEEKEE : replace secondary button by primary button
+        echo html_writer::link(new moodle_url('/user/editadvanced.php', array('id' => -1)), get_string('addnewuser'), array('class' => 'btn btn-primary mr-2'));
+        
+        // BEEKEE : add "Assign manager" button
+        $url = new moodle_url('/admin/roles/assign.php', array('contextid' => 1, 'roleid' => 12));
+        echo $OUTPUT->single_button($url, get_string('assignmanager','theme_beekee'), 'get');
     }
 
     echo $OUTPUT->footer();
