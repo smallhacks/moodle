@@ -1,0 +1,8 @@
+changepasswordsetting,tool_beekeebox
+changewifipassword,tool_beekeebox
+currentwifipassword,tool_beekeebox
+newwifipassword,tool_beekeebox
+nopassworddefined,tool_beekeebox
+wifipasswordmessage,tool_beekeebox
+wifipasswordonhelp,tool_beekeebox
+wifipasswordsetting,tool_beekeebox

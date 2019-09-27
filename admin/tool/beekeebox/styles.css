@@ -1,0 +1,68 @@
+/**
+// This file is part of Moodle - https://moodle.org/
+//
+// Moodle is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// Moodle is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+
+/**
+ * CSS rules
+ *
+ * @package    tool_beekeebox
+ * @copyright  2016 onwards Nicolas Martignoni {@link mailto:nicolas@martignoni.net}
+ * @license    https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
+/* Style collapsible region captions as h2 heading. */
+#page-admin-tool-beekeebox-index .collapsibleregioncaption {
+    font-size: 1.875rem;
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: .5rem;
+}
+
+table#beekeeboxstatus td.c0 {
+    font-weight: bold;
+}
+
+table#beekeeboxstatus tr.subinfo td.c0 {
+    font-weight: normal;
+    padding-left: 3em;
+}
+
+input#id_restartbutton, input#id_resizepartitionbutton {
+    color: #fff;
+    background-color: #faa732;
+    background-image: -moz-linear-gradient(top, #fbb450, #f89406);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fbb450), to(#f89406));
+    background-image: -webkit-linear-gradient(top, #fbb450, #f89406);
+    background-image: -o-linear-gradient(top, #fbb450, #f89406);
+    background-image: linear-gradient(to bottom, #fbb450, #f89406);
+    background-repeat: repeat-x;
+    filter: progid:dximagetransform.microsoft.gradient(startColorstr='#fffbb450', endColorstr='#fff89406', GradientType=0);
+    border-color: rgba(248, 148, 6, 0.1) rgba(248, 148, 6, 0.1) rgba(173, 103, 4, 0.25);
+    filter: progid:dximagetransform.microsoft.gradient(enabled = false);
+}
+
+input#id_shutdownbutton {
+    color: #fff;
+    background-color: #da4f49;
+    background-image: -moz-linear-gradient(top, #ee5f5b, #bd362f);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ee5f5b), to(#bd362f));
+    background-image: -webkit-linear-gradient(top, #ee5f5b, #bd362f);
+    background-image: -o-linear-gradient(top, #ee5f5b, #bd362f);
+    background-image: linear-gradient(to bottom, #ee5f5b, #bd362f);
+    background-repeat: repeat-x;
+    filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffee5f5b', endColorstr='#ffbd362f', GradientType=0);
+    border-color: rgba(189, 54, 47, 0.1) rgba(189, 54, 47, 0.1) rgba(128, 36, 32, 0.25);
+    filter: progid:dximagetransform.microsoft.gradient(enabled = false);
+}
